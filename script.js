@@ -14,7 +14,9 @@ var studenti = {
 
 //2. Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
 for (var key in studenti){
-    console.log(`la proprietà dell'oggetto "Studenti" : ${studenti[key]}`);
+    console.log(`valori dell'oggetto "Studenti" : ${studenti[key]}`);
+    console.log(`la proprietà dell'oggetto "Studenti" : ${(key)}`);
+
 }
 
 // _____________________________________
