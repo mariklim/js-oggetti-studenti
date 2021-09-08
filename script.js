@@ -56,9 +56,12 @@ var nuovoStudente = {
 };
 
 alert("Inserisci i tuoi dati");
-nuovoStudente.nome = prompt("scrivi il tuo nome");
-nuovoStudente.cognome = prompt("scrivi il tuo  cognome");
+nuovoStudente.nome = prompt("scrivi il tuo nome").toLowerCase();;
+nuovoStudente.cognome = prompt("scrivi il tuo  cognome").toLowerCase();;
 nuovoStudente.età = parseInt(prompt("scrivi la tua età"));
+
+nuovoStudente.nome = nuovoStudente.nome.charAt(0).toUpperCase()+nuovoStudente.nome.slice(1);
+nuovoStudente.cognome = nuovoStudente.cognome.charAt(0).toUpperCase()+nuovoStudente.cognome.slice(1);
 
 while(isNaN(nuovoStudente.età) == true){
     nuovoStudente.età = parseInt(prompt("Hai sbagliato, scrivi la tua età"));
