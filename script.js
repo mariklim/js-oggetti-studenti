@@ -15,7 +15,7 @@ var studenti = {
 //2. Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
 for (var key in studenti){
     console.log(`valori dell'oggetto "Studenti" : ${studenti[key]}`);
-    console.log(`la proprietà dell'oggetto "Studenti" : ${(key)}`);
+    console.log(`la proprietà dell'oggetto "Studenti" : ${studenti[key]}`);
 
 }
 
@@ -66,7 +66,7 @@ while(!isNaN(nuovoStudente.nome || nuovoStudente.nome == "" ) == true){
 nuovoStudente.cognome = prompt("scrivi il tuo  cognome").toLowerCase();
 
 while(!isNaN(nuovoStudente.cognome || nuovoStudente.cognome == "" ) == true){
-    nuovoStudente.nome = prompt("Hai sbagliato, scrivi il tuo nome").toLowerCase();;
+    nuovoStudente.cognome = prompt("Hai sbagliato, scrivi il tuo cognome").toLowerCase();;
 }
 
 nuovoStudente.nome = nuovoStudente.nome.charAt(0).toUpperCase()+nuovoStudente.nome.slice(1);
