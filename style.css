@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #e6e5c4;
+    font-family: 'Allison', cursive;
+}
+.container {
+    background-image: url(img/paper-texture.jpg);
+    box-shadow:  35px 35px 70px #9b9b9b,
+             -35px -35px 70px #e6e5c4;;
+    max-width: 60%;
+    height: 90vh;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+
+.container h2{
+    font-size: 70px;
+    padding: 50px;
+}
+
+.container li{
+    font-size: 35px;
+}

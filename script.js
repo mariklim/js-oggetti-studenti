@@ -44,7 +44,7 @@ arrStudenti = [
 
 for (var i = 0; i<arrStudenti.length; i++){
     // console.log(`${arrStudenti[i].nome} ${arrStudenti[i].cognome} `);
-    document.getElementById("studenti").innerHTML += (`<li>${arrStudenti[i].nome} ${arrStudenti[i].cognome}</li>`);
+    document.getElementById("studenti").innerHTML += (`<li>${arrStudenti[i].nome} ${arrStudenti[i].cognome}, età: ${arrStudenti[i].età} anni</li>`);
 }
 
 //3. Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
@@ -52,13 +52,18 @@ for (var i = 0; i<arrStudenti.length; i++){
 var nuovoStudente = {
     "nome": "",
     "cognome": "",
-    "età": 0,
+    "età": "",
 };
 
-nuovoStudente.nome = prompt("scrivi il nome");
-nuovoStudente.cognome = prompt("scrivi il cognome");
-nuovoStudente.età = prompt("scrivi la tua età");
+alert("Inserisci i tuoi dati");
+nuovoStudente.nome = prompt("scrivi il tuo nome");
+nuovoStudente.cognome = prompt("scrivi il tuo  cognome");
+nuovoStudente.età = parseInt(prompt("scrivi la tua età"));
+
+while(isNaN(nuovoStudente.età) == true){
+    nuovoStudente.età = parseInt(prompt("Hai sbagliato, scrivi la tua età"));
+}
 
 arrStudenti.push(nuovoStudente);
 console.log(`${arrStudenti[i].nome} ${arrStudenti[i].cognome} ${arrStudenti[i].età} `);
-document.getElementById("studenti").innerHTML += (`<li>${arrStudenti[i].nome} ${arrStudenti[i].cognome} ${arrStudenti[i].età}</li>`);
+document.getElementById("studenti").innerHTML += (`<li>${arrStudenti[i].nome} ${arrStudenti[i].cognome}, età: ${arrStudenti[i].età} anni</li>`);
